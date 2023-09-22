@@ -31,6 +31,7 @@ class IndexTest(TestCase):
         response = self.client.post(reverse('login'), self.login_data, follow=True)
         self.assertTrue(self.user.is_authenticated)
 
+
 def test_logout(self):
     self.client.force_login(self.login_user)
     response = self.client.post(reverse('logout'), follow=True)

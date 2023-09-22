@@ -13,7 +13,6 @@ from django.contrib.messages import constants as messages
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-import dj_database_url
 
 load_dotenv()
 
