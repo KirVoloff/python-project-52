@@ -1,11 +1,14 @@
 install:
 	poetry install
 
+build:
+	poetry build
+
 makemigrations:
 	python3 manage.py makemigrations
 
 migrate:
-	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager:app
+	python3 manage.py migrate
 
 start:
 	python3 manage.py runserver
