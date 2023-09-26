@@ -37,3 +37,4 @@ coverage.xml
 htmlcov/
 
 data.json
+.idea/
