@@ -38,3 +38,4 @@ htmlcov/
 
 data.json
 .idea/
+.env.example
