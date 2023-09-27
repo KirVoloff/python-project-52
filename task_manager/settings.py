@@ -30,14 +30,12 @@ SECRET_KEY = 'fis5ntd-qr+^mwacrgc#!eq0zzg))=1*30uafnfa4u!f92wd42'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = []
 
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+HOSTS = os.getenv('HOST', None)
+if HOSTS:
+    ALLOWED_HOSTS = os.getenv('HOST').split(",")
 else:
-    ALLOWED_HOSTS.append('webserver')
-    ALLOWED_HOSTS.append('127.0.0.1')
+    ALLOWED_HOSTS = ['localhost', 'webserver']
 
 # Application definition
 
