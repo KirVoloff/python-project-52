@@ -13,7 +13,7 @@ Task Manager is a task management system. It allows you to set tasks, assign per
 ### Demonstration on Render
 
 
-##Tech stack
+## Tech stack
 
 - python3
 - python-dotenv
@@ -30,10 +30,10 @@ Task Manager is a task management system. It allows you to set tasks, assign per
 
 ## Set up
 
-1. Clone repository:
-`git clone git@github.com:KirVoloff/python-project-52.git`
+1. Clone repository:  
+`git clone git@github.com:KirVoloff/python-project-52.git`  
 `cd python-project-52`
-2. Create enviroment, insall dependencies:
+2. Create enviroment, insall dependencies:  
 `make install`
 3. Create a new PostgreSQL database `createdb dbname`
 4. Create `.env` file for enviromental variables storage
