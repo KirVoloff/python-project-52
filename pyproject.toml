@@ -17,7 +17,7 @@ whitenoise = {extras = ["brotli"], version = "^6.5.0"}
 django-bootstrap5 = "^23.3"
 django-filter = "^23.2"
 rollbar = "^0.16.3"
-flake8 = "^5.0.4"
+flake8 = "^4.0.1"
 coverage = "^7.3.1"
 distro-info = "^1.0"
 
