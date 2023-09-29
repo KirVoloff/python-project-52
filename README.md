@@ -1,4 +1,4 @@
-# Task manager
+# Task manager.
 
 
 ### Hexlet tests and linter status:
