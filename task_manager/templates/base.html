@@ -23,9 +23,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'users:users' %}">{% translate "Users" %}</a>
           </li>
-        </ul>
-        {% if request.user.is_authenticated %} 
-        <ul class="navbar-nav"> 
+          {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'statuses:statuses' %}">{% translate "Statuses" %}</a>
           </li>
@@ -35,20 +33,22 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'tasks:tasks' %}">{% translate "Tasks" %}</a>
           </li>
+          {% endif %}
+        </ul>
+        <ul class="navbar-nav">
+          {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">{% translate "Logout" %}</a>
           </li>
-        </ul>
-        {% else %}
-        <ul class="navbar-nav">
+          {% else %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'login' %}">{% translate "Login" %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'users:register' %}">{% translate "Sign up" %}</a>
+            <a class="nav-link" href="{% url 'users:users' %}">{% translate "Registration" %}</a>
           </li>
-      </ul>
-        {% endif %}
+          {% endif %}
+        </ul>
       </div>
     </nav>
     <div class="container wrapper flex-grow-1">
