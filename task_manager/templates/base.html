@@ -21,17 +21,17 @@
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'users:users' %}">{% translate "Users" %}</a>
+            <a class="nav-link" href="{% url 'users' %}">{% translate "Users" %}</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'statuses:list' %}">{% translate "Statuses" %}</a>
+            <a class="nav-link" href="{% url 'statuses' %}">{% translate "Statuses" %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'labels:list' %}">{% translate "Labels" %}</a>
+            <a class="nav-link" href="{% url 'labels' %}">{% translate "Labels" %}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'tasks:list' %}">{% translate "Tasks" %}</a>
+            <a class="nav-link" href="{% url 'tasks' %}">{% translate "Tasks" %}</a>
           </li>
           {% endif %}
         </ul>
