@@ -1,11 +1,15 @@
-from django.urls import path
-from task_manager.users import views
+from django.contrib import admin
+from django.urls import path, include
+from task_manager.views import IndexView, LoginUserView, LogoutUserView
 
-app_name = 'users'
 
 urlpatterns = [
-    path('', views.UsersList.as_view(), name='users'),
-    path('create/', views.RegisterUser.as_view(), name="register"),
-    path('<int:pk>/update/', views.UpdateUser.as_view(), name="update_user"),
-    path('<int:pk>/delete/', views.DeleteUser.as_view(), name="delete_user")
+    path('', IndexView.as_view(), name='home'),
+    path('login/', LoginUserView.as_view(), name='login'),
+    path('logout/', LogoutUserView.as_view(), name='logout'),
+    path('users/', include('task_manager.users.urls')),
+    path('statuses/', include('task_manager.statuses.urls')),
+    path('tasks/', include('task_manager.tasks.urls')),
+    path('labels/', include('task_manager.labels.urls')),
+    path('admin/', admin.site.urls),
 ]
