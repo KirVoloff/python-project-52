@@ -29,6 +29,7 @@ class LoginUserView(SuccessMessageMixin, LoginView):
 class LogoutUserView(LogoutView):
     """Logout user"""
     next_page = reverse_lazy('home')
+
     def get_success_url(self):
         success_url = reverse_lazy('home')
         messages.add_message(
