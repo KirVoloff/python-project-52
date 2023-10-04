@@ -39,3 +39,4 @@ htmlcov/
 data.json
 .idea/
 .env.example
+myenv/bin/
