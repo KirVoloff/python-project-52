@@ -136,11 +136,6 @@ MESSAGE_TAGS = {
 
 LANGUAGE_CODE = 'ru-ru'
 
-LANGUAGES = (
-    ('en-us', 'English'),
-    ('ru-ru', 'Russian'),
-)
-
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
