@@ -281,7 +281,7 @@ msgstr "Вы не авторизованы! Пожалуйста, выполни
 
 #: task_manager/users/views.py:53
 msgid "You profile been updated!"
-msgstr "Пользователь успешно изменен"
+msgstr "Пользователь успешно изменён"
 
 #: task_manager/users/views.py:55
 msgid "User update"
